@@ -1,0 +1,5 @@
+# Caddy in front of the app. Caddy obtains and renews TLS certificates automatically.
+# DOMAIN must point at the VM's public IP before Caddy can get a certificate.
+{$DOMAIN} {
+	reverse_proxy 127.0.0.1:8000
+}
